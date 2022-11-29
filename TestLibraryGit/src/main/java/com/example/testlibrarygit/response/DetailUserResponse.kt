@@ -1,4 +1,4 @@
-package com.example.testlibrarygit
+package com.example.testlibrarygit.response
 
 import com.google.gson.annotations.SerializedName
 
