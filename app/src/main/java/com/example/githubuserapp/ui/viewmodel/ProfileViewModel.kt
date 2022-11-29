@@ -11,6 +11,7 @@ import com.example.githubuserapp.data.local.room.UserDatabase
 import com.example.githubuserapp.data.remote.response.DetailUserResponse
 import com.example.githubuserapp.data.remote.retrofit.ApiConfig
 import com.example.githubuserapp.utils.ResponseStatus
+import com.example.testlibrarygit.ApiConf
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,6 +33,7 @@ class ProfileViewModel(application: Application)  : AndroidViewModel(application
     fun getDetail(query: String) {
         isLoading.postValue(true)
         val client = ApiConfig.getApiService().getDetailUser(query)
+        val client2 = ApiConf.getApiService().getDetailUser(query)
         client.enqueue(object : Callback<DetailUserResponse> {
             override fun onResponse(
                 call: Call<DetailUserResponse>,
