@@ -65,8 +65,8 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.prasetya25'
-                artifactId = 'test-library-git'
-                version = '1.2'
+                artifactId = 'sample'
+                version = '1.3'
             }
         }
     }
