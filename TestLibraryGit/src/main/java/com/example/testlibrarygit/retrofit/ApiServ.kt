@@ -24,5 +24,4 @@ interface ApiServ {
     @Headers("Authorization: token "+"")
     fun getDetailUser(@Path("login") login : String): Call<DetailUserResponse>
 
-
 }
