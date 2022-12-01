@@ -11,6 +11,7 @@ import com.example.githubuserapp.data.local.room.UserDatabase
 import com.example.githubuserapp.data.remote.response.DetailUserResponse
 import com.example.githubuserapp.data.remote.retrofit.ApiConfig
 import com.example.githubuserapp.utils.ResponseStatus
+import com.example.testlibrarygit.retrofit.ApiConf
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
