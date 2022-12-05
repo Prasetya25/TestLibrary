@@ -31,9 +31,9 @@ class FollowViewModel : ViewModel() {
     fun getListUser(query: String, tab: Int) {
         isLoading.postValue(true)
         val client = if (tab == 1){
-            ApiConf.getApiServ().getFollowing(query)
+            ApiConf.getApiServ().getFollowing("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", query)
         } else {
-            ApiConf.getApiServ().getFollowers(query)
+            ApiConf.getApiServ().getFollowers("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", query)
         }
         client.enqueue(object : Callback<List<UserResponse>> {
             override fun onResponse(

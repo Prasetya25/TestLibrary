@@ -34,7 +34,7 @@ class ProfileViewModel(application: Application)  : AndroidViewModel(application
 
     fun getDetail(query: String) {
         isLoading.postValue(true)
-        val client = ApiConf.getApiServ().getDetailUser(query)
+        val client = ApiConf.getApiServ().getDetailUser("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", query)
         client.enqueue(object : Callback<DetailUserResponse> {
             override fun onResponse(
                 call: Call<DetailUserResponse>,
