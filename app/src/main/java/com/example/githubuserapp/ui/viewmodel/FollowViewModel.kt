@@ -4,9 +4,10 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.githubuserapp.data.User
-import com.example.githubuserapp.data.remote.response.UserResponse
-import com.example.githubuserapp.data.remote.retrofit.ApiConfig
+//import com.example.githubuserapp.data.remote.retrofit.ApiConfig
 import com.example.githubuserapp.utils.ResponseStatus
+import com.example.testlibrarygit.response.UserResponse
+import com.example.testlibrarygit.retrofit.ApiConf
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,9 +31,9 @@ class FollowViewModel : ViewModel() {
     fun getListUser(query: String, tab: Int) {
         isLoading.postValue(true)
         val client = if (tab == 1){
-            ApiConfig.getApiService().getFollowing(query)
+            ApiConf.getApiServ().getFollowing(query)
         } else {
-            ApiConfig.getApiService().getFollowers(query)
+            ApiConf.getApiServ().getFollowers(query)
         }
         client.enqueue(object : Callback<List<UserResponse>> {
             override fun onResponse(
