@@ -62,10 +62,15 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
+                from components.release
+
                 groupId = 'com.github.prasetya25'
                 artifactId = 'sample'
                 version = '1.3'
-                from components.release
+
+                pom{
+                    description = 'A description of my library'
+                }
             }
         }
     }
